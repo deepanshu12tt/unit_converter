@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_to_converter_app"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center" />
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/enter_number"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.398"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview"
+        app:layout_constraintVertical_bias="0.078"
+        android:textSize="24sp"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/miles"
+        android:onClick="milesconvert"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="@string/km_to_miles"
+        android:textColor="@color/black"
+        android:background="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        app:layout_constraintVertical_bias="0.241" />
+
+    <Button
+        android:id="@+id/centimetre"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="@string/km_to_centimetre"
+        android:onClick="centimetreconvert"
+        android:background="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toEndOf="@+id/miles"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        app:layout_constraintVertical_bias="0.241" />
+
+    <Button
+        android:id="@+id/metre"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:onClick="metreconvert"
+        android:text="@string/km_to_metre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/miles"
+        app:layout_constraintVertical_bias="0.236" />
+
+    <Button
+        android:id="@+id/feet"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="@string/km_to_feet"
+        android:onClick="feetconvert"
+        android:background="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/metre"
+        app:layout_constraintTop_toBottomOf="@+id/centimetre"
+        app:layout_constraintVertical_bias="0.237" />
+
+
+
+
+    <TextView
+        android:id="@+id/tempout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="84dp"
+        android:hint="@string/result"
+        android:textColor="#7A1212"
+        android:textColorHint="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.249"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/metre"
+        app:layout_constraintVertical_bias="0.604" />
+</androidx.constraintlayout.widget.ConstraintLayout>
